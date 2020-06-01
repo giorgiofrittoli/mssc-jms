@@ -10,13 +10,15 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class MsscJmsApplication {
 
     public static void main(String[] args) throws Exception {
-        ActiveMQServer activeMQServer = ActiveMQServers.newActiveMQServer(
-                new ConfigurationImpl().setPersistenceEnabled(false)
-                        .setJournalDirectory("target/data/journal")
-                        .setSecurityEnabled(false)
-                        .addAcceptorConfiguration("invm", "vm://0")
-        );
-        activeMQServer.start();
+
+//        ActiveMQServer activeMQServer = ActiveMQServers.newActiveMQServer(
+//                new ConfigurationImpl().setPersistenceEnabled(false)
+//                        .setJournalDirectory("target/data/journal")
+//                        .setSecurityEnabled(false)
+//                        .addAcceptorConfiguration("invm", "vm://0")
+//        );
+//        activeMQServer.start();
+
         SpringApplication.run(MsscJmsApplication.class, args);
     }
 
